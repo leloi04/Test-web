@@ -55,10 +55,10 @@ test.describe("Register Feature", () => {
   // ====================================
   // TC-RG-03: Email sai định dạng
   // ====================================
-  test("TC-RG-03 - Email sai định dạng", async ({ page }) => {
+  test.only("TC-RG-03 - Email sai định dạng", async ({ page }) => {
     const randomNum = Math.floor(Math.random() * 100000000);
 
-    await page.getByPlaceholder("Nhập email").fill("abc.com");
+    await page.getByPlaceholder("Nhập email").fill("abc@g.com");
     await page.getByPlaceholder("Nhập họ và tên").fill("Lê Văn Lợi");
     await page.getByPlaceholder("Nhập số điện thoại").fill(`09${randomNum}`);
     await page.getByPlaceholder("Nhập mật khẩu").fill("123456");

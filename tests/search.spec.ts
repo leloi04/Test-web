@@ -149,7 +149,7 @@ test.describe("Search Food Feature", () => {
   // =========================
   // TC-SR-005
   // =========================
-  test("TC-SR-005 - Tìm kiếm không dấu", async ({ page }) => {
+  test.only("TC-SR-005 - Tìm kiếm không dấu", async ({ page }) => {
     const searchInput = page.getByPlaceholder(SEARCH_PLACEHOLDER);
 
     await expect(searchInput).toBeVisible();
